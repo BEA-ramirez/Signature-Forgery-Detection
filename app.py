@@ -9,7 +9,7 @@ import uuid  # Import for generating unique filenames
 app = Flask(__name__)
 
 # Load the model
-model = load_model('model/forge.keras')
+model = load_model('model/forge_mobilnet_50epochs.keras')
 
 # Define upload directory
 UPLOAD_FOLDER = './uploads'
@@ -56,6 +56,7 @@ def predict():
             # Step 4: Predict using the model
             result = model.predict(final_image)
             prediction = 'Forged' if result[0][0] > 0.5 else 'Genuine'
+            print(result)
 
         except Exception as e:
             prediction = f"Error: {str(e)}"  # Handle errors gracefully

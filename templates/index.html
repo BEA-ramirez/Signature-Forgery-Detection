@@ -65,7 +65,9 @@
 
       {% if prediction %}
       <div class="mt-8 text-center">
-        <h3 class="text-2xl font-semibold">Prediction: {{ prediction }}</h3>
+        <h3 class="text-2xl font-semibold" style="color: #343f56">
+          Prediction: {{ prediction }}
+        </h3>
         <h4>[{{result[0][0]}}, {{result[0][1]}}]</h4>
 
         <div class="flex justify-around">
