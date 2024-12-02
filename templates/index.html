@@ -14,13 +14,26 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Unbounded:wght@200..900&display=swap");
       body {
         font-family: "Rubik", sans-serif;
+
+        .custom-button {
+          background: #f5e6ca; /* Initial background color */
+          color: #343f56; /* Text color */
+          transition: background 0.3s ease; /* Smooth transition */
+        }
+
+        .custom-button:hover {
+          background: #d1d5db; /* Change to your desired hover color */
+        }
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-900 w-full h-auto">
+  <body
+    class="bg-gray-100 text-gray-900 w-full h-auto"
+    style="background: #f5e6ca"
+  >
     <div
       class="w-full h-16 flex items-center justify-center shadow-md"
-      style="background: linear-gradient(to right, #8bc6ec, #9599e2)"
+      style="background: #343f56; color: #f5e6ca"
     >
       <h1 class="text-center mb-6 text-[40 rem] mt-6 font-semibold md:text-2xl">
         Signature Forgery Detection
@@ -30,6 +43,7 @@
     <div class="container mx-auto px-4 py-8">
       <form
         class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg"
+        style="background: #343f56; color: #f5e6ca"
         action="/"
         method="post"
         enctype="multipart/form-data"
@@ -42,8 +56,7 @@
           />
         </div>
         <button
-          class="w-full text-white py-3 rounded-lg mt-4 hover:bg-gray-100"
-          style="background-color: #9599e2"
+          class="w-full text-white py-3 rounded-lg mt-4 custom-button"
           type="submit"
         >
           Analyze Image
